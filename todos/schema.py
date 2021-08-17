@@ -26,6 +26,7 @@ class CreateTodo(graphene.Mutation):
     @classmethod
     def mutate(cls, root, info, title):
         todo = Todo()
+        
         todo.title = title
         todo.save()
 
